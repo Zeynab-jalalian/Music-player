@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #b8b8b8;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 10px;
+}
+.card {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.788);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px;
+}
+.img-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.music-details .song {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.music-details .singer {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+}
+.funcs {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.funcs i {
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+}
+.progress-time {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.progress-time .spent-time,
+.progress-time .total-time {
+  color: #b8b8b8;
+}
+.progress {
+  width: 80%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.2);
+  height: 10px;
+  border-radius: 10px;
+}
+.progress .progress-in {
+  width: 1%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: white;
+}
