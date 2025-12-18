@@ -3,6 +3,11 @@ const spentTime = document.querySelector(".spent-time");
 const totalTime = document.querySelector(".total-time");
 const progress = document.querySelector(".progress");
 const progressIn = document.querySelector(".progress-in");
+const prev=document.querySelector(".prev");
+const next=document.querySelector(".next");
+const song=document.querySelector(".song");
+const singer=document.querySelector(".singer");
+const img=document.querySelector(".img-box img");
 
 const audioSave = new Audio("musics/save.mp3");
 const songs = [
@@ -42,6 +47,7 @@ const songs = [
   
 ];
 
+let currentSongIndex = 0;
 let isDragging = false;
 
 play.addEventListener("click", () => {
