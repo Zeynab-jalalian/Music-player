@@ -87,14 +87,27 @@ body {
   background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(0,212,255,0.1));
   height: 8px;
   border-radius: 10px;
-  overflow: hidden;
+  position: relative; 
 }
 .progress .progress-in {
-  width: 1%;
+  width: 0%;
   height: 100%;
   background: linear-gradient(90deg, #00d4ff, #0066ff);
   border-radius: 10px 0 0 10px;
-  transition: width 0.3s ease;
+  box-shadow: 0 0 10px #00d4ff;
+  transition: width 0.1s linear;
+  position: relative;
+}
+.progress .progress-in::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #00d4ff;
+  border-radius: 50%;
   box-shadow: 0 0 10px #00d4ff;
 }
 
@@ -116,3 +129,4 @@ body {
   transform: scale(1.2);
   text-shadow: 0 0 12px #00d4ff;
 }
+

@@ -1,6 +1,7 @@
 const play = document.querySelector(".play");
 const spentTime = document.querySelector(".spent-time");
 const totalTime = document.querySelector(".total-time");
+const progress = document.querySelector(".progress");
 const progressIn = document.querySelector(".progress-in");
 
 const audioSave = new Audio("musics/save.mp3");
@@ -37,4 +38,12 @@ audioSave.addEventListener("timeupdate", () => {
 
   const progressPercent = (audioSave.currentTime / audioSave.duration) * 100;
   progressIn.style.width = `${progressPercent}%`;
+});
+
+progress.addEventListener("click", (e) => {
+  const width = progress.clientWidth;
+  const clickX = e.offsetX;
+
+  const clickPercent = clickX / width;
+  audioSave.currentTime = clickPercent * audioSave.duration;
 });
