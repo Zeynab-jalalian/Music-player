@@ -172,7 +172,7 @@ body {
 }
 
 .swiper-slide {
-  width: 120px !important;   /* اندازه هر اسلاید */
+  width: 120px !important;   
   text-align: center;
   opacity: 0.5;
   transition: 0.3s;
@@ -186,7 +186,7 @@ body {
 
 .swiper-slide img {
   width: 100%;
-  height: 120px;             /* کاور مربعی و کوچیک */
+  height: 120px;            
   object-fit: cover;
   border-radius: 12px;
 }

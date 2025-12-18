@@ -11,17 +11,29 @@ const img = document.querySelector(".img-box img");
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 
 const songs = [
+     {
+    title: "Freaks",
+    singer: "Surf Curse",
+    cover: "img/freaks.jpg",
+    file: "musics/freaks.mp3",
+  },
+  {
+    title: "No Time to Die",
+    singer: "Billie Eilish",
+    cover: "img/no.png",
+    file: "musics/no.mp3",
+  },
+  {
+    title: "The Winner Takes It All",
+    singer: " ABBA",
+    cover: "img/winner.jpg",
+    file: "musics/winner.mp3",
+  },
   {
     title: "Save Your Tears",
     singer: "The Weeknd",
     cover: "img/save.jpg",
     file: "musics/save.mp3",
-  },
-  {
-    title: "Freaks",
-    singer: "Surf Curse",
-    cover: "img/freaks.jpg",
-    file: "musics/freaks.mp3",
   },
   {
     title: "Sweater Weather",
