@@ -5,6 +5,7 @@ const progress = document.querySelector(".progress");
 const progressIn = document.querySelector(".progress-in");
 
 const audioSave = new Audio("musics/save.mp3");
+let isDragging = false;
 
 play.addEventListener("click", () => {
   if (play.classList.contains("bi-play-circle-fill")) {
@@ -47,3 +48,23 @@ progress.addEventListener("click", (e) => {
   const clickPercent = clickX / width;
   audioSave.currentTime = clickPercent * audioSave.duration;
 });
+
+progress.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  updateProgress(e);
+});
+progress.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    updateProgress(e);
+  }
+});
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+function updateProgress(e) {
+  const width = progress.clientWidth;
+  const clickX = e.offsetX || e.clientX - progress.getBoundingClientRect().left;
+  const clickPercent = clickX / width;
+
+  audioSave.currentTime = clickPercent * audioSave.duration;
+}
