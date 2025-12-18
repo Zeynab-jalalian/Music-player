@@ -5,6 +5,43 @@ const progress = document.querySelector(".progress");
 const progressIn = document.querySelector(".progress-in");
 
 const audioSave = new Audio("musics/save.mp3");
+const songs = [
+  {
+    title: "Save Your Tears",
+    singer: "The Weeknd",
+    cover: "img/save.jpg",
+    file: "musics/save.mp3"
+  },
+   {
+    title: "Sweater Weather",
+    singer: "The Neighbourhood",
+    cover: "img/sweater.jpg",
+    file: "musics/sweater.mp3"
+  },
+  
+   {
+    title: "Summertime Sadness",
+    singer: "Lana Del Rey",
+    cover: "img/summer.jpg",
+    file: "musics/summer.mp3"
+  },
+  
+   {
+    title: "Someone Like You",
+    singer: "Adele",
+    cover: "img/someone.jpg",
+    file: "musics/someone.mp3"
+  },
+  
+   {
+    title: "Freaks",
+    singer: "Surf Curse ",
+    cover: "img/freaks.jpg",
+    file: "musics/freaks.mp3"
+  },
+  
+];
+
 let isDragging = false;
 
 play.addEventListener("click", () => {
